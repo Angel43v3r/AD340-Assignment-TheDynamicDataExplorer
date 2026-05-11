@@ -2,6 +2,7 @@ export interface WeatherData {
     id: string;
     label?: string; // Optional label (?)
     city: string;
+    state?: string; // Optional state for US locations
     temperature: number;
     description: string;
     type: 'Clear' | 'Clouds' |'Drizzle' | 'Rain' | 'Thunderstorm' | 'Snow' | 'Special';
@@ -16,7 +17,7 @@ export interface GeoLocation {
     state?: string;
 }
 
-const API_KEY = '974241e8c14f617edff96995261d31bd'; // My OpenWeather API key
+const API_KEY = '' // My OpenWeather API key
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 const GEO_URL = 'https://api.openweathermap.org/geo/1.0/direct';
 
@@ -53,7 +54,7 @@ export async function fetchGeoLocation(city: string): Promise<GeoLocation[]> {
  * @param lon - Longitude of the location
  * @return A promise that resolves to the weather data
  */
-export async function fetchWeatherData(lat: number, lon: number, city: string, label?: string): Promise<WeatherData> {
+export async function fetchWeatherData(lat: number, lon: number, city: string, state?: string, label?: string): Promise<WeatherData> {
     try {
         const response = await fetch(`${BASE_URL}?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`);
         if (!response.ok) {
@@ -66,6 +67,7 @@ export async function fetchWeatherData(lat: number, lon: number, city: string, l
             id: `${lat}-${lon}-${data.dt}`, 
             label: label,
             city: city,
+            state: data.sys.country === 'US' ? state : undefined, 
             temperature: Math.round(data.main.temp),
             description: data.weather[0].description,
             type: data.weather[0].main as WeatherData['type'], // Cast to the defined types
