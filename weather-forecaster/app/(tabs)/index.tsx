@@ -6,7 +6,7 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <Image
-      source={require('../assets/images/weatherIcon.png')}
+      source={require('../../assets/images/weatherIcon.png')}
       style={styles.icon}
       />
       <Text style={styles.title}>Weather Forecaster</Text>
@@ -26,9 +26,11 @@ export default function Index() {
 const styles = StyleSheet.create({
   button: {
     marginTop: 20,
-    backgroundColor: '#7bebee',
+    backgroundColor: '#f8f29a',
     padding: 12,
     borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#413f3d',
   },
   buttonText: {
     color: '#413f3d',
@@ -39,7 +41,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#d8cfd0',
+    backgroundColor: '#99cce4',
   },
   icon: {
     backgroundColor: '#d8cfd0',
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
     height: 160,
     borderRadius: 30,
     marginBottom: 8,
-    borderWidth: 4,
+    borderWidth: 2,
     borderColor: '#413f3d',
   },
   text: {
@@ -56,8 +58,9 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: 'bold',
+    color: '#fff8f2',
     alignItems: 'center',
-    marginBottom: 16,
+    marginBottom: 12,
     textTransform: 'uppercase',
   },
 })
