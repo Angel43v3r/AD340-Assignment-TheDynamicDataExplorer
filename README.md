@@ -33,11 +33,6 @@ Make sure you have the following installed:
     - This project uses **Expo** to build and run the app on Android and iOS devices.
     - It simplifies setup by handling native configuration and build tools automatically
 
-- **Android Studio** (Optional)
-    - **Android Studio** is required to run the app on an Android emulator or a physical device.
-    - It provides the Android SDK, emulator, and build tools needed for React Native development.
-    - You can download from the [Android Studio official website](https://developer.android.com/studio).
-
 - **Expo Go** (Optional)
     - **Expo Go** is a mobile app that allows you to quickly preview and test React Native apps on your physical device.
     - It is useful for rapid development without needing a full Android or iOS build setup.
@@ -47,6 +42,12 @@ Make sure you have the following installed:
     ```bash
     npx create-expo-app@latest --template
     ```
+
+- **Android Studio** (Optional)
+    - **Android Studio** is required to run the app on an Android emulator or a physical device.
+    - It provides the Android SDK, emulator, and build tools needed for React Native development.
+    - You can download from the [Android Studio official website](https://developer.android.com/studio).
+
 
  *Note: To check version installed in your terminal or bash:*
  ```bash
@@ -74,12 +75,20 @@ git clone git@github.com:Angel43v3r/AD340-Assignment-TheDynamicDataExplorer.git
 cd AD340-Assignment-TheDynamicDataExplorer
 ```
 
-4. Install dependencies listed in package.json
-```bash
-npm install
+4. If you haven't yet, install Expo:
+ ```bash
+    npx create-expo-app@latest --template
 ```
 
-5. Open the project in your preferred code editor such as VS Code.
+Next, choose a template, I choose `Default`
+Lastly, name your app
+*Note this will automatically run npm install and install all the needed dependencies for Expo*
+
+
+5. Navigate to the folder
+```
+cd <Folder_Name>
+```
 
 6. Start the development server:
 ```bash
@@ -101,6 +110,7 @@ npx expo start
     - Run on **Web Browser**:
         - Press w -> open web
 
+8. Open the project in your preferred code editor such as VS Code.
 
 
 ## Running Test
