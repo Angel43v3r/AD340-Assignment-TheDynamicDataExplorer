@@ -9,7 +9,7 @@
 ## Table Of Contents
 1. [Objective](#objective)
 2. [How to Use](#how-to-use)
-3. [Running Test](#running-test)
+3. [Running Test](#running-test-optional)
 4. [Contributing](#contributing)
 5. [License](#license)
 
@@ -118,8 +118,8 @@ npx expo start
 8. Open the project in your preferred code editor such as VS Code.
 
 
-## Running Test
-This project uses Vitest as the test runner.
+## Running Test (OPTIONAL)
+I did not implement a test on this project. This is how to setup a Vitest as the test runner.
 
 ### Installation
 If not already installed, in the `TheDynamicDataExplorer` or `root` folder:
@@ -127,7 +127,7 @@ If not already installed, in the `TheDynamicDataExplorer` or `root` folder:
 npm install -D vitest
 ```
 
-### Test Setup (OPTIONAL - I did not implement this on this project)
+### Test Setup
 Make sure your `package.json` should include:
 ```json
 "scripts": {
