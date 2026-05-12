@@ -15,7 +15,7 @@
 
 
 ## Objective
-Build a mobile application using Expo and React Native that communicates with the real world. This app manages a a "Weather FOrecaster", fetching live data from a public API and displaying it in a sleek, searchable interface.
+Build a mobile application using Expo and React Native that communicates with the real world. This "Weather Forecaster" app searches the "Current Weather Data" in the OpenWeather, fetching live data from a public API and displaying it in a sleek, searchable interface.
 
 ## How to Use
 ### Prerequisites
@@ -84,6 +84,11 @@ Next, choose a template, I choose `Default`
 Lastly, name your app
 *Note this will automatically run npm install and install all the needed dependencies for Expo*
 
+#### Install dependencies:
+```bash
+npx expo install @react-native-async-storage/async-storage
+```
+*This is for async storage*
 
 5. Navigate to the folder
 ```
@@ -122,7 +127,7 @@ If not already installed, in the `TheDynamicDataExplorer` or `root` folder:
 npm install -D vitest
 ```
 
-### Test Setup
+### Test Setup (OPTIONAL - I did not implement this on this project)
 Make sure your `package.json` should include:
 ```json
 "scripts": {
@@ -142,7 +147,7 @@ TheDynamicDataExplorer/
 ├── app/
 │   ├── _layout.tsx
 │   ├── index.tsx
-│   └── task.tsx
+│   └── search.tsx
 ├── test/
 │   ├── index.test.ts
 │   └── task.test.ts
