@@ -57,7 +57,7 @@ export default function SearchScreen() {
             />
             <Text style={styles.emptyHistoryText}>Your search history is empty</Text>
             <Text style={styles.emptyHistorySubtext}>
-                Type a city or zip code above to get the latest forecast.
+                Type a city above to get the latest forecast.
             </Text>
         </View>
     );
@@ -84,7 +84,7 @@ export default function SearchScreen() {
                 <Search size={20} color="#413f3d" style={styles.searchIcon} />
                 <TextInput
                     style={styles.searchInput}
-                    placeholder="Search by city or zip code"
+                    placeholder="Search by city"
                     placeholderTextColor="#75726f"
                     value={searchQuery}
                     onChangeText={setSearchQuery}

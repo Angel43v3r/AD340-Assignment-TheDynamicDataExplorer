@@ -26,7 +26,7 @@ export interface ForecastDay {
     icon: string;
 }
 
-const API_KEY = 'MY_API_KEY'; // My OpenWeather API key Make sure this is HIDDEN in .env file!
+const API_KEY = 'MY_API_KEY'; // NOTE: Enter your OpenWeather API key here, but make sure this is HIDDEN when pushing to REPO or make a .env file!
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 const GEO_URL = 'https://api.openweathermap.org/geo/1.0/direct';
 const FORECAST_URL = 'https://api.openweathermap.org/data/2.5/forecast';
